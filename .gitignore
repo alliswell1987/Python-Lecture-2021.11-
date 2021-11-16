@@ -1,42 +1,5 @@
-# ckkim add
+# ckiekim add
 exercise.ipynb
-googlemapskey.txt
-kakaomapkey.txt
-openweatherkey.txt
-roadapikey.txt
-gov_data_api_key.txt
-seoul_api_key.txt
-clova_key.json
-papago_key.json
-fontawesome-free-5.15.1-web/
-log/
-img/
-upload/
-chromedriver.exe
-covid.db
-model/
-clus_pca_data/
-mnist/
-news/
-naver/
-voice/
-keys/
-mysql.json
-movies/
-movie_cos_sim.pkl
-
-# gitignore template for Jupyter Notebooks
-# website: http://jupyter.org/
-
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
-
-# IPython
-profile_default/
-ipython_config.py
-
-# Remove previous ipynb_checkpoints
-#   git rm -r .ipynb_checkpoints/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -60,6 +23,8 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -78,12 +43,14 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
+*.py,cover
 .hypothesis/
 .pytest_cache/
 
@@ -95,6 +62,7 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
+db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -109,11 +77,29 @@ docs/_build/
 # PyBuilder
 target/
 
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
 # pyenv
 .python-version
 
-# celery beat schedule file
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
 celerybeat-schedule
+celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
@@ -139,3 +125,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
